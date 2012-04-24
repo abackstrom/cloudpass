@@ -1,0 +1,32 @@
+<?php if( $flashtypes = $this->flashes() ): ?>
+	<ul class="flashes">
+	<?php foreach( $flashtypes as $type => $flashes ): ?>
+		<?php foreach( $flashes as $flash ): ?>
+		<li class="flash-<?php echo $type; ?>"><?php echo $flash; ?></li>
+		<?php endforeach; ?>
+	<?php endforeach; ?>
+	</ul>
+<?php endif; ?>
+
+<form method=post>
+	<ul>
+		<li>
+			<label for="user_id">User ID:</label>
+			<?php echo $this->user->id; ?>
+		</li>
+		<li>
+			<label for="username">Username:</label>
+			<?php echo $this->user->username; ?>
+		</li>
+		<li>
+			<label for="passphrase">Passphrase</label>
+			<input type="text" id="passphrase" name="passphrase" />
+		</li>
+		<li>
+			<input type="submit" />
+		</li>
+	</ul>
+</form>
+
+<textarea rows=8 cols=70><?php echo htmlentities( $this->user->publickey ); ?></textarea>
+<textarea rows=20 cols=70><?php echo htmlentities( $this->user->privatekey ); ?></textarea>

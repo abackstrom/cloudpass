@@ -1,0 +1,8 @@
+<h1><?php echo $this->row->label; ?></h1>
+
+<ul>
+	<li>Domain: <?php echo htmlentities( $this->row->domain ); ?></li>
+	<li>Username: <input value="<?php echo htmlentities( $this->row->username ); ?>"></li>
+	<li>Password: <a class="password-view" href="/password/<?php echo $this->row->id; ?>">View</a></li>
+	<li>Note: <?php echo $this->row->note; ?></li>
+</ul>

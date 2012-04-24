@@ -1,0 +1,8 @@
+<ul class="passwords-list">
+	<?php foreach( $this->rows as $row ): ?>
+		<li>
+			<a href="/view/<?php echo $row->id; ?>"><?php echo $row->label; ?></a><br>
+			<?php echo $row->username; ?>, <?php echo $row->domain; ?>
+		</li>
+	<?php endforeach; ?>
+</ul>

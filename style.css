@@ -1,0 +1,41 @@
+body {
+	font-family: Helvetica;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+li {
+	padding: 0;
+	margin: 1ex 0;
+}
+
+label {
+	display: block;
+}
+
+input, textarea {
+	display: block;
+}
+
+/* Passwords List
+------------------- */
+
+.passwords-list {
+	border: 1px solid black;
+}
+
+.passwords-list li {
+	margin: 0;
+	padding: 1em;
+	height: 50px;
+
+	border-bottom: 1px solid black;
+}
+
+.passwords-list li:last-child {
+	border-bottom: none;
+}
