@@ -15,3 +15,9 @@ Current data store is a SQLite3 table:
 	sqlite> CREATE TABLE passwords ( id INTEGER PRIMARY KEY AUTOINCREMENT , label TEXT, username TEXT, password BLOB, note TEXT, domain TEXT);
 	sqlite> CREATE TABLE users( id INTEGER PRIMARY KEY AUTOINCREMENT, username TEXT, publickey BLOB, privatekey BLOB );
 	sqlite> 
+
+## Requirements
+
+* [OpenSSL](http://us3.php.net/manual/en/book.openssl.php) (PHP compiled --with-openssl)
+* [klein.php](https://github.com/chriso/klein.php)
+* PDO with SQLite
